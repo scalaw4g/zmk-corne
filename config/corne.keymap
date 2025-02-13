@@ -18,7 +18,7 @@
             bindings = <&kp SPACE>, <&bootloader>;
 
             #binding-cells = <0>;
-            mods = <(MOD_LSFT)>;
+            mods = <(MOD_LALT)>;
         };
     };
 
