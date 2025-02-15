@@ -5,8 +5,8 @@
 # pass flags to the build command, `snippet` to add a Zephyr snippet, and
 # `artifact-name` to assign a name to distinguish build outputs from each other:
 #
- board: [ "nice_nano_v2" ]
- shield: [ "corne_left", "corne_right" ]
+ #board: [ "nice_nano_v2" ]
+# shield: [ "corne_left", "corne_right" ]
 # include:
 #   - board: bdn9_rev2
 #   - board: nice_nano_v2
@@ -18,16 +18,12 @@
 #     artifact-name: corne_left_with_studio
 #
 #---
-#include:
-#  # peripheral_left + nice_nano_v2 + nice_oled
-#  - board: nice_nano_v2
-#    shield: corne_dongle_pro_micro
-#    cmake-args: -DCONFIG_ZMK_KEYBOARD_NAME=\"Nano_Dongle\" -DCONFIG_ZMK_USB=y
-#    artifact-name: corne_dongle_pro_micro
-#  - board: nice_nano_v2
-#    shield: corne_left_peripheral nice_oled
-#    artifact-name: nice_corne_left_peripheral_oled
-#  - board: nice_nano_v2
-#    shield: corne_right nice_oled
-#    artifact-name: nice_corne_right_oled
+include:
+  - board: nice_nano_v2
+    shield: corne_left
+    artifact-name: corne_left
+    cmake-args: -DCONFIG_ZMK_KEYBOARD_NAME=\"Corne_Turquoise\"
+  - board: nice_nano_v2
+    shield: corne_right nice_oled
+    artifact-name: corne_right
 
