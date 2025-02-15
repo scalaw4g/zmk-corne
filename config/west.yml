@@ -2,25 +2,10 @@ manifest:
   remotes:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
-   - name: scalaw4g
-      url-base: https://github.com/scalaw4g
-    - name: englmaxi
-      url-base: https://github.com/englmaxi
-    - name: mctechnology17
-      url-base: https://github.com/mctechnology17
   projects:
     - name: zmk
       remote: zmkfirmware
       revision: main
       import: app/west.yml
-    - name: zmk-dongle
-      remote: scalaw4g
-      revision: main
-    - name: zmk-dongle-display
-      remote: englmaxi
-      revision: main
-    - name: zmk-nice-oled
-      remote: mctechnology17
-      revision: main
   self:
     path: config
